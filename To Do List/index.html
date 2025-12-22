@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>To-Do List</title>
+
+</head>
+<body>
+
+    <h1 class="head title">Task Remainder List</h1>
+
+    <div class="outer-container">
+
+        <div class="inner-container">
+
+            <h2 class="inner title">My To-Do List</h2>
+
+            <div class="inner-card">
+                <div class="search-bar">
+                    <input type="text" id="taskInput" placeholder="Add a new task...">
+                </div>
+                <button class="add-search" onclick="addList()">+ Add</button>
+            </div>
+            <div class="to-doList-container">
+                <ul class="to-doList">
+                    <li class="placeholder">No tasks yet. Add one to get Started!</li>
+                </ul>
+            </div>
+
+            <hr>
+            <div class="footer">
+                <div class="footer-left">Tasks remaining: </div>
+                <div class="footer-right">Completed: </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+<!-- 
+         function addList() {
+            const input = document.getElementById("taskInput");
+            const taskText = input.value.trim();
+            const toDoList = document.querySelector(".todo-events");
+
+            // Prevent empty tasks
+            if (taskText === "") return;
+
+            // Create list item
+            const li = document.createElement("li");
+            li.className = "todo-item";
+
+            // Create checkbox
+            const checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+
+            // Create task text
+            const span = document.createElement("span");
+            span.textContent = taskText;
+
+            // Strike-through when checked
+            checkbox.addEventListener("change", () => {
+                span.style.textDecoration = checkbox.checked ? "line-through" : "none";
+            });
+
+            // Create delete button
+            const deleteBtn = document.createElement("button");
+            deleteBtn.textContent = "❌";
+            deleteBtn.className = "delete-btn";
+
+            deleteBtn.addEventListener("click", () => {
+                li.remove();
+            });
+
+            // Append everything
+            li.appendChild(checkbox);
+            li.appendChild(span);
+            li.appendChild(deleteBtn);
+            toDoList.appendChild(li);
+
+            // Clear input
+            input.value = "";
+        }
+
+-->
