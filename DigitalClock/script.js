@@ -163,7 +163,7 @@ function createBubble() {
     bubble.style.animationDuration =
         Math.random() * 1 + 6 + 's'; // 6–10s
 
-    sky.appendChild(bubble);
+    sky.appendChild(bubble);    
 
     setTimeout(() => bubble.remove(), 12000);
 }
@@ -200,3 +200,33 @@ function resetClock() {
 
     updateStopwatchDisplay();
 }
+
+// Dispaly Date and Day
+const dayNames = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday"
+];
+const monthNames = [
+    "January", "Febuary", "March","April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+]
+const day = document.querySelector('.day')
+const date = document.querySelector('.date')
+const month = document.querySelector('.month')
+const year = document.querySelector('.year')
+function displayDateDay(){
+    const now = new Date()
+    day.textContent = dayNames[now.getDay()];
+
+    date.textContent = now.getDate().toString().padStart(2,'0');
+    month.textContent = monthNames[now.getMonth()];
+    year.textContent = now.getFullYear().toString()
+
+
+}
+displayDateDay()

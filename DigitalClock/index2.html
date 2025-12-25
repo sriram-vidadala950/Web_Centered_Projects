@@ -7,35 +7,53 @@
         <title>Digital Clock</title>
     </head>
     <body>
-        <div class="outer-container">
-            <div class="sky"></div>
-            <div class="inner-container">
-                <div class="eyes">
-                    <div class="eye">
-                        <div class="eye-ball"></div>
-                    </div>
-                    <div class="eye">
-                        <div class="eye-ball"></div>
-                    </div>
+        <div class="sky"></div>
+        <div class="container">
+            <div class="calendar">
+                <div class="cal-date">
+                    <h1 class="year"></h1>
+                    <h1 class="month"></h1>
                 </div>
-                <div class="nose">
-                    <a href="index1.html">Clock</a>
+
+                <div class="cal-bar">
+                    <span></span>
+                    <span></span>
                 </div>
-                <div class="time-stamp"> 
-                    <h1 class="time-stamp-text"><span class="hours">00</span> : <span class="minutes">00</span> : <span class="seconds">00</span></h1>
-                </div>
-                <div class="smile">
-                        
+
+                <div class="cal-day">
+                    <h1 class="date"></h1>
+                    <h1 class="day"></h1>
                 </div>
             </div>
-            <div class="inner-buttons">
-                <button class="btn start" onclick="startClock()">Start</button>
-                <button class="btn stop" onclick="stopClock()">Stop</button>
-                <button class="btn reset" onclick="resetClock()">Reset</button>
-                <button class="btn lap" onclick="lapClock()">Lap</button>
-            </div>
-            <div class="laps">
-                <ul class="laps-list"></ul>
+            <div class="outer-container">
+                <div class="inner-container">
+                    <div class="eyes">
+                        <div class="eye">
+                            <div class="eye-ball"></div>
+                        </div>
+                        <div class="eye">
+                            <div class="eye-ball"></div>
+                        </div>
+                    </div>
+                    <div class="nose">
+                        <a href="index1.html">Clock</a>
+                    </div>
+                    <div class="time-stamp"> 
+                        <h1 class="time-stamp-text"><span class="hours">00</span> : <span class="minutes">00</span> : <span class="seconds">00</span></h1>
+                    </div>
+                    <div class="smile">
+                            
+                    </div>
+                </div>
+                <div class="inner-buttons">
+                    <button class="btn start" onclick="startClock()">Start</button>
+                    <button class="btn stop" onclick="stopClock()">Stop</button>
+                    <button class="btn reset" onclick="resetClock()">Reset</button>
+                    <button class="btn lap" onclick="lapClock()">Lap</button>
+                </div>
+                <div class="laps">
+                    <ul class="laps-list"></ul>
+                </div>
             </div>
         </div>
         <!-- <div class="clock">

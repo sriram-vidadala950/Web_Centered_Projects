@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Word Counter</title>
+</head>
+<body>
+
+<div class="outer-container">
+    <div class="inner-container">
+
+        <div class="head-div">
+            <h1>Word Counter</h1>
+        </div>
+
+        <div class="input-bar">
+            <span>
+                <input id="content" type="text" placeholder="Enter your sentence..">
+                <button onclick="countWords()" class="search">🔍</button>
+            </span> 
+        </div>
+
+        <div class="result">
+
+            <div class="char-bg">
+                <div class="row clickable" onclick="toggleCharacters('vowels')">
+                    <h3 class="side">Vowels</h3>
+                    <h3 class="count">0</h3>
+                </div>
+                <div id="vowels-details" class="details hidden"></div>
+            </div>
+
+            <div class="char-bg">
+                <div class="row clickable" onclick="toggleCharacters('consonents')">
+                    <h3 class="side">Consonents</h3>
+                    <h3 class="count">0</h3>
+                </div>
+                <div id="consonents-details" class="details hidden"></div>
+            </div>
+
+            <div class="char-bg">
+                <div class="row">
+                    <h3 class="side">Words</h3>
+                    <h3 class="count">0</h3>
+                </div>
+           </div>
+
+            <div class="char-bg">
+                <div class="row">
+                    <h3 class="side">Characters</h3>
+                    <h3 class="count">0</h3>
+                </div>
+            </div>
+            
+            <div class="char-bg">            
+                <div class="row clickable" onclick="toggleCharacters('special')">
+                    <h3 class="side">Special Characters</h3>
+                    <h3 class="count">0</h3>
+                </div>
+                <div id="special-details" class="details hidden"></div>
+            </div>
+        </div>
+
+        <div class="reset">
+            <button onclick="resetSearch()" class="reset-btn">Reset</button>
+        </div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
